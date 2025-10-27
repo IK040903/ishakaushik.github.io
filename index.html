@@ -1,1 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Isha Kaushik — Neuroscience · Design · Tech</title>
+  <link rel="stylesheet" href="styles.css">
+  <meta name="description" content="Isha Kaushik — bridging neuroscience, design and technology.">
+</head>
+<body>
+  <header class="hero" id="home">
+    <div class="hero-inner">
+      <img class="avatar" src="media/your-photo.jpg" alt="Isha Kaushik">
+      <div class="hero-text">
+        <h1>Isha Kaushik</h1>
+        <p class="tagline">Where neuroscience meets human-centered design.</p>
+        <p class="sub">Researcher • Designer • Maker — reflections, projects, and short videos explaining why the work matters.</p>
+        <nav class="nav">
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#reflections">Reflections</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="about" class="container">
+      <h2>About</h2>
+      <p>Short, human paragraph about your background: neuroscience grad student at Columbia, interest in neurotech, interactive media, and ethics. One or two lines on your mission.</p>
+    </section>
+
+    <section id="projects" class="container">
+      <h2>Projects</h2>
+
+      <article class="card">
+        <h3>CreN.Visio — Neuromarketing Creativity Evaluator</h3>
+        <p>Short description of project and your role.</p>
+        <p class="links">
+          <a href="https://github.com/YOUR_USERNAME/CreN.Visio" target="_blank">Code</a> ·
+          <a href="#reflections" onclick="scrollToEl('reflection-behavenue')">Watch reflection</a>
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>Behavenue — Dry EEG for Neuromarketing (Intern)</h3>
+        <p>Improved sensor ergonomics, prototyped data pipelines, evaluated signal quality vs comfort.</p>
+        <p class="links">
+          <a href="https://github.com/YOUR_USERNAME/behavenue" target="_blank">Repo</a>
+          · <a href="#reflections" onclick="scrollToEl('reflection-behavenue')">Reflection</a>
+        </p>
+      </article>
+
+      <!-- Add more project cards here -->
+    </section>
+
+    <section id="reflections" class="container">
+      <h2>Reflections — Why it mattered</h2>
+
+      <!-- Reflection: short intro video (self-host or Vimeo embed) -->
+      <div id="reflection-behavenue" class="reflection">
+        <h3>Behavenue — Dry EEG (Reflection)</h3>
+
+        <!-- Option A: Embedded Vimeo (replace VIDEO_ID) -->
+        <!--
+        <div class="video-wrap">
+          <iframe src="https://player.vimeo.com/video/VIDEO_ID?badge=0&autopause=0&player_id=0"
+                  frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        -->
+
+        <!-- Option B: Self-hosted mp4 in repo (good for short clips) -->
+        <div class="video-wrap">
+          <video controls width="100%" preload="metadata" poster="media/behavenue-thumb.jpg">
+            <source src="media/behavenue-reflection.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <p class="reflection-text">
+          Short blurb: "I worked on improving the dry EEG device to reduce friction for neuromarketing studies..."
+        </p>
+
+        <details>
+          <summary>Key takeaways</summary>
+          <ul>
+            <li>Usability vs signal quality: tradeoffs matter at device design stage.</li>
+            <li>Trust & adoption are social problems as much as technical.</li>
+            <li>Design iteration must include participant comfort metrics.</li>
+          </ul>
+        </details>
+      </div>
+
+      <!-- Add more reflections -->
+    </section>
+
+    <section id="contact" class="container">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:you@columbia.edu">you@columbia.edu</a></p>
+      <p>GitHub · <a href="https://github.com/YOUR_USERNAME" target="_blank">YOUR_USERNAME</a> · LinkedIn · Substack</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Isha Kaushik — <small>Neuroscience · Design · Tech</small></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
 
