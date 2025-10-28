@@ -1,317 +1,135 @@
 /* Importing a Google Font: 'Playfair Display' with different font weights */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap');
-
 /* ===== Base Styles ===== */
-body {
-    font-family: 'Playfair Display', serif; /* Sets main font style */
-    line-height: 1.5; /* Improves text readability */
-    color: #2d3e2f; /* Default text color */
-    background: #f2e5d7; /* Light beige background */
-    max-width: 1000px; /* Limits page width for readability */
-    margin: auto; /* Centers the page content horizontally */
-    padding: 20px 20px; /* Adds spacing inside the page edges */
+body{
+  font-family: 'Playfair Display', serif; /*base style is playfair and fallback style is serif*/
+  line-height: 1.5; /* Improves text readability */
+  color: #2d3e2f; /* Default text color */
+  background: #f2e5d7; /* Light beige background */
+  max-width: 1000px; /* Limits page width for readability */
+  margin: auto; /* Centers the page content horizontally */
+  padding: 20px 20px; /* Adds spacing inside the page edges */
 }
 
 header {
     margin-bottom: 20px; /* Adds space below header */
 }
 
-/* ===== Main Heading ===== */
 h1 {
     font-size: 35px; /* Large title size */
-    font-weight: 800; /* Extra bold */
-    margin-bottom: 10px; /* Space below title */
+    font-weight: 700; /* Extra bold */
+    margin-bottom: 0px; /* Space below title */
     text-align: center; /* Centers the title */
-    color: #1a2e1c; /* Deep green text */
+  color: #1a2e1c; /* Dark green text */
 }
 
+.tagline-container {
+    text-align: center;
+  color: #3d5240; /* Slightly muted dark green */
+  }
 /* ===== Introduction Section ===== */
 .intro {
-    margin-bottom: 50px; /* Adds spacing after intro section */
+    margin-bottom: 30px; /* Adds spacing after intro section */
 }
-
-.intro-container {
-    display: flex; /* Places image and text side-by-side */
-    gap: 50px; /* Space between them */
-    margin-bottom: 20px; /* Adds spacing below container */
-    align-items: flex-start; /* Aligns items at the top */
+.intro-container{
+  display:flex;
+  gap: 50px; /* Space between them */
 }
-
 .intro-left {
     flex-shrink: 0; /* Prevents the image from shrinking */
 }
-
 .profile-photo {
-    width: 200px; /* Image width */
-    height: 200px; /* Image height */
-    object-fit: cover; /* Ensures image fills the box without distortion */
-    border: 5px solid #8a6f47; /* Adds brown border around image */
-    display: block; /* Removes inline spacing below image */
+  width: 200px; /* Image width */
+  height: 200px; /* Image height */
+  object-fit: cover; /* Ensures image fills the box without distortion */
+  border: 5px solid #8a6f47; /* Adds brown border around image */
+  display: block; /* Removes inline spacing below image */
 }
 
 .intro-right {
     flex: 1; /* Makes text container take remaining space */
 }
-
-/* Paragraph inside intro section */
 .intro-right p {
-    font-size: 1rem; /* Regular text size */
-    text-align: justify; /* Even left and right edges */
-    color: #3d5240; /* Slightly muted dark green */
-    margin-bottom: 20px; /* Space after each paragraph */
+  font-size: 1rem; /* Regular text size */
+  text-align: justify; /* Even left and right edges */
+  color: #3d5240; /* Slightly muted dark green */
 }
-
-/* Links inside intro section */
 .intro-right a {
     color: #5a4a35; /* Brownish color for links */
     text-decoration: none; /* Removes underlines */
-    border-bottom: 1px solid transparent; /* Invisible border for hover animation */
-    transition: border-bottom 0.3s; /* Smooth hover effect */
 }
-
 .intro-right a:hover {
     border-bottom: 1px solid #5a4a35; /* Shows underline on hover */
 }
-
-/* ===== Contact Links ===== */
 .contact-links {
     display: flex; /* Arranges links horizontally */
     gap: 20px; /* Space between links */
     flex-wrap: wrap; /* Allows wrapping on smaller screens */
-    padding-top: 10px; /* Space above links */
 }
-
 .contact-links a {
     color: #5a4a35; /* Link color */
-    text-decoration: none; /* No underline */
-    font-size: 0.95rem; /* Slightly smaller text */
-    transition: color 0.3s; /* Smooth color change on hover */
 }
-
 .contact-links a:hover {
     color: #2d3e2f; /* Darker on hover */
+  
 }
-
-/* ===== Section Headings ===== */
 h2 {
-    font-size: 1.5rem; /* Subheading size */
+    font-size: 30px; /* Subheading size */
     font-weight: 700; /* Bold */
-    margin-top: 50px; /* Space before section */
-    margin-bottom: 20px; /* Space after heading */
-    border-bottom: 2px solid #b89968; /* Decorative bottom border */
-    padding-bottom: 10px; /* Space between text and border */
-    color: #1a2e1c; /* Dark green text */
+  margin-bottom: 10px; /* Space after heading */
+  border-bottom: 2px solid #b89968; /* Decorative bottom border */
+  color: #1a2e1c; /* Dark green text */
+}
+.section-intro {
+  font-size: 1rem; /* Regular text size */
+  text-align: justify; /* Even left and right edges */
+  color: #3d5240; /* Slightly muted dark green */
+}
+.section-intro a {
+    color: #7a4b2a; /* Warm brown accent */
+    text-decoration: none;
+    font-weight: 400;
+}
+.section-intro a:hover {
+    color: #a35b38;
+}
+.section-list {
+    max-width: 1000px;
+}
+.section-list li {
+    font-size: 1.05rem;
+    color: #2f3b32;
+    background-color: #f9efe4;
+    border-left: 4px solid #c9b59a; /* Accent line for emphasis */
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
 }
 
-/* ===== News Section ===== */
+/* Hover effect on each project item */
+.section-list li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f5e7d9;
+}
 .news-item {
     margin-bottom: 20px; /* Space between news items */
     padding: 15px; /* Inner spacing */
     background: #c9a876; /* Warm beige background */
-    border-left: 3px solid #8a6f47; /* Accent border on the left */
+    border-left: 3px solid #8a6f47; /* Accent border o*/
 }
-
-.news-date {
-    font-weight: 600; /* Semi-bold date text */
-    margin-bottom: 5px; /* Space below date */
-    color: #1a2e1c; /* Deep green text */
-}
-
-/* ===== Section Introduction Text ===== */
-.section-intro {
-    margin-bottom: 30px; /* Space below intro text */
-    font-style: italic; /* Makes text italic */
-    text-align: justify; /* Aligns text evenly */
-    color: #3d5240; /* Muted dark green */
-}
-
-.section-intro a {
-    color: #5a4a35; /* Brownish links */
-    text-decoration: none; /* No underline */
-    border-bottom: 1px solid transparent; /* Adds hover underline effect */
-    transition: border-bottom 0.3s; /* Smooth hover animation */
-}
-
-.section-intro a:hover {
-    border-bottom: 1px solid #5a4a35; /* Underline on hover */
-}
-
-/* ===== Lists Within Sections ===== */
-.section-list a {
-    color: #5a4a35; /* Link color */
-    text-decoration: none; /* No underline */
-    border-bottom: 1px solid transparent; /* Subtle hover effect */
-    transition: border-bottom 0.3s;
-}
-
-.section-list a:hover {
-    border-bottom: 1px solid #5a4a35; /* Underline on hover */
-}
-
-/* ===== Social Links (Optional Footer or Bio) ===== */
-.social-links {
-    margin-top: 15px; /* Space above social icons */
-    font-size: 0.9rem; /* Smaller text */
-}
-
-.social-links a {
-    color: #5a7c5e; /* Greenish tone */
-    text-decoration: none;
-    transition: color 0.3s; /* Smooth hover effect */
-}
-
-.social-links a:hover {
-    color: #7a9b7e; /* Lighter green on hover */
-}
-
-/* Removes bullets from lists */
-.section-list {
-    list-style: none;
-}
-
-/* Styles each list item */
-.section-list li {
-    margin-bottom: 15px; /* Space between items */
-    padding-left: 0; /* No indentation */
-    color: #3d5240; /* Text color */
-}
-
-/* Adds an arrow symbol before each list item */
-.section-list li::before {
-    content: "→"; /* Decorative arrow */
-    color: #8a6f47; /* Brown color */
-    font-weight: bold;
-    display: inline-block;
-    width: 1.5em; /* Reserves space before text */
-    margin-left: -1.5em; /* Pulls arrow into margin */
-    margin-right: 0.5em; /* Space between arrow and text */
-}
-
-/* Extra info styling (like job titles, affiliations, etc.) */
-.role-info {
-    color: #6b7c6d; /* Grey-green tone */
-    font-size: 0.9rem; /* Smaller text */
-}
-
-/* Subsection titles under sections */
-.subsection-title {
-    font-size: 1.1rem;
-    margin-top: 30px;
-    margin-bottom: 15px;
-    font-weight: 600;
-    color: #1a2e1c;
-}
-
-/* ===== Blog Section ===== */
-.blog-category {
-    margin-bottom: 30px; /* Space after category */
-}
-
-.blog-title {
-    font-weight: 600; /* Bold blog title */
-    margin-bottom: 10px; /* Space below title */
-    font-size: 1.1rem; /* Slightly bigger than body text */
-    color: #1a2e1c; /* Deep green */
-}
-
-.blog-items {
-    padding-left: 20px; /* Indent blog list items */
-    color: #6b7c6d; /* Text color */
-    line-height: 2; /* Spacing between lines */
-}
-
-.blog-items a {
-    color: #5a4a35; /* Brown link */
-    text-decoration: none;
-    border-bottom: 1px solid transparent;
-    transition: border-bottom 0.3s;
-}
-
-.blog-items a:hover {
-    border-bottom: 1px solid #5a4a35; /* Underline on hover */
-}
-
-/* ===== Travel Section ===== */
-.travel-list {
-    list-style: none; /* Removes bullets */
-    padding-left: 20px; /* Indent list */
-    color: #6b7c6d;
-}
-
-.travel-year {
-    font-weight: 600; /* Emphasizes year */
-    color: #2d3e2f;
-    margin-top: 15px;
-    margin-bottom: 5px;
-}
-
-/* ===== Video Grid Layout ===== */
-.video-grid {
-    display: grid; /* Enables CSS grid layout */
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive columns */
-    gap: 20px; /* Space between videos */
-    margin-top: 20px;
-}
-
-/* Placeholder for videos (used before embedding) */
-.video-placeholder {
-    aspect-ratio: 9/16; /* Portrait video shape */
-    background: linear-gradient(135deg, #a68a5c 0%, #c9a876 100%); /* Gradient fill */
-    border-radius: 10px; /* Rounded corners */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #2d3e2f; /* Icon/text color */
-    font-size: 3rem; /* Big play icon or symbol */
-    cursor: pointer; /* Shows clickable hand cursor */
-    transition: transform 0.3s, box-shadow 0.3s; /* Hover animation */
-    box-shadow: 0 2px 8px rgba(90, 74, 53, 0.2); /* Soft shadow */
-}
-
-.video-placeholder:hover {
-    transform: scale(1.05); /* Slight zoom effect */
-    box-shadow: 0 4px 12px rgba(90, 74, 53, 0.3); /* Stronger shadow on hover */
-}
-
-/* ===== Footer Section ===== */
+ 
 footer {
-    margin-top: 80px; /* Space above footer */
-    padding-top: 30px; /* Padding inside footer */
-    border-top: 1px solid #c8d5c4; /* Subtle top border */
-    text-align: center; /* Centered text */
-    color: #6b7c6d; /* Muted text color */
-    font-size: 0.9rem; /* Slightly smaller font */
+    text-align: center;
+    margin-top: 60px;
+    padding: 20px 0;
+    color: #4b5b4f;
+    font-size: 1rem;
+    border-top: 1px solid #c9b59a;
+    background-color: #f5e7d9;
 }
 
-/* ===== Responsive Design for Small Screens ===== */
-@media (max-width: 768px) {
-    body {
-        padding: 20px 15px; /* Slightly less padding */
-    }
-
-    h1 {
-        font-size: 1.5rem; /* Smaller title for mobile */
-    }
-
-    h2 {
-        font-size: 1.3rem; /* Smaller section headings */
-    }
-
-    .intro-container {
-        flex-direction: column; /* Stack image and text vertically */
-        align-items: center; /* Center them */
-    }
-
-    .intro-right p {
-        text-align: justify; /* Keeps text readable */
-    }
-
-    .profile-photo {
-        width: 150px; /* Smaller image on mobile */
-        height: 150px;
-    }
-
-    .contact-links {
-        justify-content: center; /* Center links on small screens */
-    }
+footer p {
+    margin: 0;
 }
