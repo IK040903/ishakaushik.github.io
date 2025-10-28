@@ -133,3 +133,71 @@ footer {
 footer p {
     margin: 0;
 }
+/* ===== BACK TO TOP BUTTON ===== */
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background: #8a6f47;
+  color: #f2e5d7;
+  border: none;
+  border-radius: 50%;
+  font-size: 24px;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.back-to-top:hover {
+  background: #6b5838;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* ===== FADE IN ANIMATION ===== */
+.section-list li,
+.news-item,
+.miscs-item {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.section-list li.fade-in,
+.news-item.fade-in,
+.miscs-item.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== SMOOTH SCROLL BEHAVIOR ===== */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ===== ACTIVE LINK STYLE (optional navigation) ===== */
+a.active {
+  color: #8a6f47 !important;
+  font-weight: 600;
+}
+
+/* ===== MOBILE ADJUSTMENTS ===== */
+@media (max-width: 768px) {
+  .back-to-top {
+    width: 45px;
+    height: 45px;
+    bottom: 20px;
+    right: 20px;
+    font-size: 20px;
+  }
+}
