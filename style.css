@@ -30,10 +30,6 @@ h1 {
     color: #1a2e1c;
 }
 
-h1::before {
-    content: "🍑";
-    font-size: 1.5rem;
-}
 
 .intro {
     margin-bottom: 40px;
