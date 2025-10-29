@@ -34,6 +34,7 @@ h1 {
 .intro-container{
   display:flex;
   gap: 50px; /* Space between them */
+  align-items: center; /* centers them vertically within the container */
 }
 .intro-left {
     flex-shrink: 0; /* Prevents the image from shrinking */
